@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kyra Delray (née Edwards) — DPhil Student at Oxford</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #121318;
+      --text: #e8eaed;
+      --muted: #a1a7b3;
+      --accent: #86a7ff;
+      --border: #1e2230;
+      --ring: rgba(134,167,255,.35);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:#f7f8fa; --card:#ffffff; --text:#111318;
+        --muted:#495163; --accent:#3a63ff;
+        --ring:rgba(58,99,255,.25); --border:#e8ecf2;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(124,156,255,.12), transparent 50%), var(--bg);
+      color: var(--text);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 980px; margin: 0 auto; padding: 40px 20px; }
+    header { display:flex; align-items:center; justify-content:space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 12px; }
+    .brand { display:flex; align-items:center; gap:14px; }
+    .avatar { width: 54px; height: 54px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), #74e6ff); }
+    nav a { margin-left: 14px; padding: 8px 12px; border-radius: 999px; border:1px solid var(--border); }
+    nav a:hover { box-shadow: 0 0 0 6px var(--ring); text-decoration:none; }
+
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap: 28px; align-items:center; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius: 18px; padding: 22px; box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+    h1 { font-size: clamp(30px, 4vw, 44px); margin: 0 0 10px; line-height: 1.1; }
+    h2 { font-size: 22px; margin-top: 0; }
+    p { margin-top: 0; color: var(--muted); }
+    ul { margin: 0; padding-left: 18px; }
+    footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
+      nav a { margin-left: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar" aria-hidden="true"></div>
+        <div>
+          <strong>Kyra Delray (née Edwards)</strong><br>
+          <span style="color:var(--muted)">DPhil Student · Ex-GB Rower · Data Scientist</span>
+        </div>
+      </div>
+      <nav>
+        <a href="/cv.html">CV</a>
+        <a href="/talks.html">Talks</a>
+        <a href="/papers.html">Papers</a>
+        <a href="/blog.html">Blog</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Hi, I’m Kyra.</h1>
+        <p>I am a DPhil (PhD) student in Health Data Science at the University of Oxford and a former full-time athlete with the Great Britain Rowing Team.</p>
+        <p>My doctoral research focuses on developing <strong>causal machine learning methodology</strong> to generate <strong>individualised intervention suggestions</strong> using app and wearable data to improve health outcomes. I also work on establishing <strong>gold‑standard methods for menstrual‑cycle analysis</strong>, consult with companies on <strong>gene‑based performance prediction</strong> algorithms, and contribute to advancing <strong>fairness in AI models</strong>. Beyond academia, I have presented <strong>television documentaries</strong> and science features for BBC and Sky.</p>
+        <div class="tags">
+          <span class="tag">Oxford DPhil</span>
+          <span class="tag">Causal ML</span>
+          <span class="tag">Wearables · Health Outcomes</span>
+          <span class="tag">Gene → Performance</span>
+          <span class="tag">AI Fairness</span>
+          <span class="tag">GB Rowing · TV</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Now</h2>
+        <ul>
+          <li>Researching causal inference and uncertainty in personalised healthcare AI.</li>
+          <li>Collaborating on menstrual‑cycle analytics and gene‑based performance models at Genletics.</li>
+          <li>Speaking on fairness, women’s health data, and causal ML methods at academic events.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="margin-top:40px;">
+      <div class="card">
+        <h2>Featured</h2>
+        <ul>
+          <li><a href="/cv.html">CV — Education & Experience</a></li>
+          <li><a href="/papers.html">Causal ML for Personalised Health Interventions</a></li>
+          <li><a href="/talks.html">AI Fairness and Performance Prediction — Guest Talks</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Kyra Delray · <a href="mailto:kyra@example.com">kyra@example.com</a> · 
+      <a href="https://github.com/kyradelray">@kyradelray</a> · 
+      <a href="https://www.linkedin.com/in/kyra-delray-n%C3%A9e-edwards-285899281/">LinkedIn</a>
+    </footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
